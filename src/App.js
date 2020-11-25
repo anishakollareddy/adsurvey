@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as Survey from 'survey-react'
-import logo from './logo.svg';
 import './App.css';
 
 const sendDataToServer = (survey) => {
