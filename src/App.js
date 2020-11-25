@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as Survey from 'survey-react'
 import './App.css';
+import Title from './Title';
 
 const sendDataToServer = (survey) => {
   // var resultAsString = JSON.stringify(survey.data);
@@ -19,6 +20,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Title />
         <Survey.Survey model={model} onComplete={sendDataToServer}/>
       </div>
     );
