@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as Survey from 'survey-react'
 import logo from './logo.svg';
 import './App.css';
-import Title from './Title';
 
 const sendDataToServer = (survey) => {
   // var resultAsString = JSON.stringify(survey.data);
@@ -21,7 +20,13 @@ class App extends Component {
 
     return (
       <div className="App">
-          <Title />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
         <Survey.Survey model={model} onComplete={sendDataToServer}/>
       </div>
     );
